@@ -1,5 +1,6 @@
 #pragma once
 #include <memory>
+#include <cmath>
 
 namespace wzd {
 	namespace cpptest {

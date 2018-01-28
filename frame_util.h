@@ -2,6 +2,8 @@
 #include "file_buffer.h"
 #include <iostream>
 #include <algorithm>
+#include <cmath>
+#include <cstring>
 
 namespace wzd {
 	namespace cpptest {
@@ -11,12 +13,17 @@ namespace wzd {
 
 			int64_t FindFrame(const std::vector<uint8_t>&);
 			std::vector<std::pair<size_t, uint64_t>> PseudorandomSeqErgodic(std::shared_ptr<uint8_t>, uint32_t) const;
-			void SequenceScramble(std::shared_ptr<uint8_t>, uint64_t pos, std::wstring) const;
+			void SequenceScramble(std::shared_ptr<uint8_t>, uint64_t pos) const;
+			void ExtractRow(uint64_t, size_t);
+			void Matrix(const int32_t, const int32_t);
+			void golayDecode();
+			void GenarateFile(std::string) const;
+
 		protected:
 
 		private:
 			static constexpr int32_t frame_detect_count_ = 2;
-			static constexpr double_t frame_account_ = 0.05;
+			static constexpr double frame_account_ = 0.05;
 
 			std::shared_ptr<uint8_t> frame_buffer_;
 			std::vector<std::pair<size_t, uint8_t>> frame_head_pos_;

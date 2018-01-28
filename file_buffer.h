@@ -3,6 +3,7 @@
 #include <memory>
 #include <fstream>
 #include <locale>
+#include <iostream>
 
 namespace wzd {
 	namespace cpptest {
@@ -11,7 +12,8 @@ namespace wzd {
 		public:
 			explicit FileBuffer() {}
 
-			bool load(const std::wstring& filepath);
+			bool load(const std::string& filepath);
+			bool BasebandDemodulate(const std::string& filepath);
 
 			// No copying allow
 			FileBuffer(const FileBuffer&) = delete;
@@ -23,15 +25,15 @@ namespace wzd {
 		};
 
 		template<typename T>
-		inline bool FileBuffer<T>::load(const std::wstring& filepath)
+		inline bool FileBuffer<T>::load(const std::string& filepath)
 		{
 			std::ifstream file(filepath, std::ios::binary);
 
 			// check the file exists
 			if (!file.good()) {
 				std::cout << "ERROR: File doesn't exist or otherwise can't load file:" << std::endl;
-				std::wcout.imbue(std::locale("chs"));
-				std::wcout << filepath << std::endl;
+				// std::wcout.imbue(std::locale("chs"));
+				std::cout << filepath << std::endl;
 				return false;
 			}
 

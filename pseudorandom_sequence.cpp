@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "pseudorandom_sequence.h"
 
 namespace wzd {
