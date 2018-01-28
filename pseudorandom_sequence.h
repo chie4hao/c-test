@@ -34,7 +34,7 @@ namespace wzd {
 			std::shared_ptr<uint8_t>::element_type* sequence_buffer_array = sequence_buffer_ptr_.get();
 
 			const auto begin_ptr = initial_sequence.begin();
-			for (auto current_ptr = begin_ptr, begin = initial_sequence.begin(); current_ptr != initial_sequence.end(); ++current_ptr) {
+			for (auto current_ptr = begin_ptr; current_ptr != initial_sequence.end(); ++current_ptr) {
 				memcpy(sequence_buffer_array + (current_ptr - begin_ptr) * sizeof(T), current_ptr, sizeof(T));
 			}
 		}

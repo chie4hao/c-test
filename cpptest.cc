@@ -8,7 +8,6 @@ int main()
 {
 	clock_t start, finish;
 	start = clock();
-
 	
 	wzd::cpptest::FrameUtil a(216);
 	a.load("C:\\github\\cpptest\\data\\111.dat");
