@@ -15,5 +15,5 @@ pseudorandom_sequence.o: pseudorandom_sequence.cc
 	clang++ -c -O3 pseudorandom_sequence.cc
 .PHONY: clean
 clean:
-	del cpptest.exe
+	del *.exe
 	del *.o

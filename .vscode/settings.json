@@ -1,7 +1,35 @@
 {
   "files.associations": {
     "utility": "cpp",
-    "istream": "cpp"
+    "istream": "cpp",
+    "array": "cpp",
+    "*.tcc": "cpp",
+    "cctype": "cpp",
+    "clocale": "cpp",
+    "cmath": "cpp",
+    "cstdint": "cpp",
+    "cstdio": "cpp",
+    "cstdlib": "cpp",
+    "cstring": "cpp",
+    "ctime": "cpp",
+    "cwchar": "cpp",
+    "cwctype": "cpp",
+    "exception": "cpp",
+    "fstream": "cpp",
+    "initializer_list": "cpp",
+    "iosfwd": "cpp",
+    "iostream": "cpp",
+    "limits": "cpp",
+    "memory": "cpp",
+    "new": "cpp",
+    "ostream": "cpp",
+    "stdexcept": "cpp",
+    "streambuf": "cpp",
+    "string_view": "cpp",
+    "system_error": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "typeinfo": "cpp"
   },
   "code-runner.runInTerminal": true, // 设置成false会在“输出”中输出，无法交互
   "code-runner.executorMap": {
